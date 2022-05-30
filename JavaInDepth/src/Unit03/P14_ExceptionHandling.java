@@ -47,8 +47,9 @@ class ABC5{
 			int b=0;
 			int a=100/b;
 		}catch (ArithmeticException e) {
-				System.out.println("Done");
+				System.out.println(e.getMessage());
 		}
+		System.out.println("Done");
 		
 	}
 	
@@ -154,7 +155,7 @@ class ABC5{
 	
 	void useOfThrow(int age) throws Exception {
 	
-		if(age<18) {
+		if(age>18) {
 			throw new Exception();
 			
 		}
@@ -165,7 +166,7 @@ class ABC5{
 	}
 	void useOfThrows_And_Finally() {
 	try {
-		useOfThrow(19);
+		useOfThrow(18);
 	}catch (Exception e) {
 		e.printStackTrace();
 	}
